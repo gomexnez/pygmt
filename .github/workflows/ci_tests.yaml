@@ -43,14 +43,19 @@ jobs:
       fail-fast: false
       matrix:
         python-version: [3.6, 3.7, 3.8]
-        #os: [ubuntu-latest, macOS-latest, windows-latest]
-        os: [ubuntu-latest, macOS-latest]
+        os: [ubuntu-latest, macOS-latest, windows-latest]
     # environmental variables used in coverage
     env:
       OS: ${{ matrix.os }}
       PYTHON: ${{ matrix.python-version }}
 
     steps:
+      # Cancel previous runs that are not completed
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.4.1
+        with:
+          access_token: ${{ github.token }}
+
       # Checkout current git repository
       - name: Checkout
         uses: actions/checkout@v2.3.1
@@ -112,9 +117,9 @@ jobs:
         run: make test PYTEST_EXTRA="-r P"
 
       # Build the documentation
-      #- name: Build the documentation
-      #  shell: bash -l {0}
-      #  run: make -C doc clean all
+      - name: Build the documentation
+        shell: bash -l {0}
+        run: make -C doc clean all
 
       # Upload coverage to Codecov
       - name: Upload coverage to Codecov
