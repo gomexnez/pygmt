@@ -546,6 +546,7 @@
         <span class="n">Wm</span><span class="o">=</span><span class="s2">&quot;meshpen&quot;</span><span class="p">,</span>
         <span class="n">Wf</span><span class="o">=</span><span class="s2">&quot;facadepen&quot;</span><span class="p">,</span>
         <span class="n">p</span><span class="o">=</span><span class="s2">&quot;perspective&quot;</span><span class="p">,</span>
+        <span class="n">I</span><span class="o">=</span><span class="s2">&quot;shading&quot;</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="nd">@kwargs_to_strings</span><span class="p">(</span><span class="n">R</span><span class="o">=</span><span class="s2">&quot;sequence&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="s2">&quot;sequence&quot;</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">grdview</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -612,6 +613,15 @@
 <span class="sd">        perspective : list or str</span>
 <span class="sd">            ``&#39;[x|y|z]azim[/elev[/zlevel]][+wlon0/lat0[/z0]][+vx0/y0]&#39;``.</span>
 <span class="sd">            Select perspective view.</span>
+
+<span class="sd">        shading : str</span>
+<span class="sd">            Provide the name of a grid file with intensities in the (-1,+1)</span>
+<span class="sd">            range, or a constant intensity to apply everywhere (affects the</span>
+<span class="sd">            ambient light). Alternatively, derive an intensity grid from the</span>
+<span class="sd">            input data grid reliefgrid via a call to ``grdgradient``; append</span>
+<span class="sd">            ``+aazimuth``, ``+nargs``, and ``+mambient`` to specify azimuth,</span>
+<span class="sd">            intensity, and ambient arguments for that module, or just give</span>
+<span class="sd">            ``+d`` to select the default arguments (``+a-45+nt1+m0``).</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">kwargs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -1210,7 +1220,7 @@
         &copy; Copyright 2017-2020, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/bedb48d5cf105c37573f8e8c5d74b97f1f741187">bedb48d</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/11235b0a7d3fe6fa670f8a206719b673f96f8b0a">11235b0</a></code>.
         </span>
       
 

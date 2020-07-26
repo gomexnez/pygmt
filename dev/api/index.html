@@ -145,15 +145,19 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#data-processing">Data Processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/pygmt.blockmedian.html">pygmt.blockmedian</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/pygmt.info.html">pygmt.info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pygmt.surface.html">pygmt.surface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pygmt.grdcut.html">pygmt.grdcut</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/pygmt.grdinfo.html">pygmt.grdinfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/pygmt.grdtrack.html">pygmt.grdtrack</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#gmt-defaults">GMT Defaults</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/pygmt.config.html">pygmt.config</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#metadata">Metadata</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/pygmt.GMTDataArrayAccessor.html">pygmt.GMTDataArrayAccessor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pygmt.info.html">pygmt.info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/pygmt.grdinfo.html">pygmt.grdinfo</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#miscellaneous">Miscellaneous</a><ul>
@@ -423,10 +427,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.blockmedian.html#pygmt.blockmedian" title="pygmt.blockmedian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blockmedian</span></code></a>(table[, outfile])</p></td>
 <td><p>Block average (x,y,z) data tables by median estimation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.info.html#pygmt.info" title="pygmt.info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">info</span></code></a>(fname, **kwargs)</p></td>
-<td><p>Get information about data tables.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.surface.html#pygmt.surface" title="pygmt.surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">surface</span></code></a>([x, y, z, data])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.surface.html#pygmt.surface" title="pygmt.surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">surface</span></code></a>([x, y, z, data])</p></td>
 <td><p>Grids table data using adjustable tension continuous curvature splines.</p></td>
 </tr>
 </tbody>
@@ -441,10 +442,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdcut.html#pygmt.grdcut" title="pygmt.grdcut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdcut</span></code></a>(grid, **kwargs)</p></td>
 <td><p>Extract subregion from a grid.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdinfo.html#pygmt.grdinfo" title="pygmt.grdinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdinfo</span></code></a>(grid, **kwargs)</p></td>
-<td><p>Get information about a grid.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdtrack.html#pygmt.grdtrack" title="pygmt.grdtrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdtrack</span></code></a>(points, grid[, newcolname, outfile])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdtrack.html#pygmt.grdtrack" title="pygmt.grdtrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdtrack</span></code></a>(points, grid[, newcolname, outfile])</p></td>
 <td><p>Sample grids at specified (x,y) locations.</p></td>
 </tr>
 </tbody>
@@ -461,6 +459,27 @@
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.config.html#pygmt.config" title="pygmt.config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config</span></code></a>(**kwargs)</p></td>
 <td><p>Set GMT defaults globally or locally.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<p>Getting metadata from tabular or grid data:</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.GMTDataArrayAccessor.html#pygmt.GMTDataArrayAccessor" title="pygmt.GMTDataArrayAccessor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GMTDataArrayAccessor</span></code></a>(xarray_obj)</p></td>
+<td><p>This is the GMT extension for <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.15.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.info.html#pygmt.info" title="pygmt.info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">info</span></code></a>(fname, **kwargs)</p></td>
+<td><p>Get information about data tables.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdinfo.html#pygmt.grdinfo" title="pygmt.grdinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdinfo</span></code></a>(grid, **kwargs)</p></td>
+<td><p>Get information about a grid.</p></td>
 </tr>
 </tbody>
 </table>
@@ -499,7 +518,7 @@ and store them in the GMT cache folder.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.datasets.load_earth_relief.html#pygmt.datasets.load_earth_relief" title="pygmt.datasets.load_earth_relief"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.load_earth_relief</span></code></a>([resolution])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.datasets.load_earth_relief.html#pygmt.datasets.load_earth_relief" title="pygmt.datasets.load_earth_relief"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.load_earth_relief</span></code></a>([resolution, …])</p></td>
 <td><p>Load Earth relief grids (topography and bathymetry) in various resolutions.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.datasets.load_japan_quakes.html#pygmt.datasets.load_japan_quakes" title="pygmt.datasets.load_japan_quakes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.load_japan_quakes</span></code></a>()</p></td>
@@ -579,7 +598,7 @@ the <a class="reference internal" href="generated/pygmt.clib.Session.call_module
 </tbody>
 </table>
 <p>Passing memory blocks between Python variables (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>,
-<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v1.0.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.Series</span></code></a>, and <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.15.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>) and GMT happens through <em>virtual
+<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v1.0.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.Series</span></code></a>, and <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.15.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>) and GMT happens through <em>virtual
 files</em>. These methods are context managers that automate the conversion of Python
 variables to GMT virtual files:</p>
 <table class="longtable docutils align-default">
@@ -674,7 +693,7 @@ variables to GMT virtual files:</p>
         &copy; Copyright 2017-2020, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/bedb48d5cf105c37573f8e8c5d74b97f1f741187">bedb48d</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/11235b0a7d3fe6fa670f8a206719b673f96f8b0a">11235b0</a></code>.
         </span>
       
 
